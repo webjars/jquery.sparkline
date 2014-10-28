@@ -43,7 +43,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>2.1.2</upstream.version>
         <upstream.url>http://omnipotent.net/jquery.sparkline/${upstream.version}</upstream.url>
-        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
+        <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
             {
                 "paths": {
@@ -51,7 +51,6 @@
                 },
                 "shim": {
                     "jquery.sparkline": ["jquery"]
-                    }
                 }
             }
         </requirejs>
@@ -96,6 +95,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
+
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
